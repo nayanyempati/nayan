@@ -7,11 +7,17 @@ class employee:
         self.overtimeRate=overtimeRate
         self.weeklytaxcredit=weeklytaxcredit
 
-    def computeWeeklyPay(hours):
-        compute = (hours*11)+(hours+15)
-        print(compute)
-        return
+    def computeWeeklyPay(self, hours):
+        compute = (hours*self.rate)+(hours+self.overtimeRate)
+        return compute
+    
+    def computeTax(self, grossPay):
+        tax=(0.4*grossPay)-self.weeklytaxcredit
+        return tax
+    
     
 
+
+        
 
     
