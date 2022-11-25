@@ -8,17 +8,17 @@ class employee:
         self.weeklytaxcredit=weeklytaxcredit
 
     def computeWeeklyPay(self, hours):
-        compute = (hours*self.rate)+(hours+self.overtimeRate)
-        print(compute)
+        compute = (hours*self.rate)+(4*self.overtimeRate)
         return compute
 
     def computeTax(self, grossPay):
         tax=(0.4*grossPay)-self.weeklytaxcredit
-        print(tax)
         return tax
     
 data=employee('nayan',35,11,15,70)
-data.computeWeeklyPay(35)
-    
 
-        
+computeWeeklyPay=data.computeWeeklyPay(35)
+computeTax = data.computeTax(computeWeeklyPay)
+
+print("Weekly Pay: "+str(computeWeeklyPay)+" and compute tax: "+ str(computeTax))
+    
